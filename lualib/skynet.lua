@@ -944,6 +944,7 @@ function skynet.init_service(start)
 	end
 end
 
+--开一个服务，并绑定消息队列回调
 function skynet.start(start_func)
 	c.callback(skynet.dispatch_message)
 	init_thread = skynet.timeout(0, function()
